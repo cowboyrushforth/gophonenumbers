@@ -7,4 +7,5 @@ type PhoneNumber struct {
 	ItalianLeadingZero   bool
 	NumberOfLeadingZeros *int
 	RawInput             string
+        CleanedNumber        string
 }

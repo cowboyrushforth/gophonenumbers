@@ -33,7 +33,9 @@ func Parse(number_to_parse, default_region string, keep_raw_input, check_region 
 		return nil, &NumberParseError{"Missing or invalid default region."}
 	}
 
-	return nil, nil
+        pn := PhoneNumber{CleanedNumber: national_number}
+
+	return &pn, nil
 }
 
 func buildNationalNumberForParsing(number string) string {
