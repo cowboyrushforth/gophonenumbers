@@ -7,7 +7,7 @@ import (
 func TestBuildNationalNumberForParsing(t *testing.T) {
 	var national_number string
 
-	if national_number = buildNationalNumberForParsing("+15038884341"); national_number != "+15038884341" {
+	if national_number = buildNationalNumberForParsing("15038884341"); national_number != "+15038884341" {
 		t.Errorf("Unexpected return value : %s", national_number)
 	}
 

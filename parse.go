@@ -70,6 +70,12 @@ func buildNationalNumberForParsing(number string) string {
 
 	national_number := buff.String()
 
+        // national numbers should always start with a plus
+        if string(national_number[0]) != "+" {
+          national_number = "+"+national_number
+        }
+
+
 	// Delete the isdn-subaddress and everything after it if it is present. Note extension won't
 	// appear at the same time with isdn-subaddress according to paragraph 5.3 of the RFC3966 spec,
 	if isdn_index := strings.Index(national_number, RFC3966_ISDN_SUBADDRESS); isdn_index > 0 {
