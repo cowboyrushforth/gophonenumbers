@@ -71,7 +71,7 @@ func buildNationalNumberForParsing(number string) string {
 	national_number := buff.String()
 
         // national numbers should always start with a plus
-        if string(national_number[0]) != "+" {
+        if len(national_number) > 0 && string(national_number[0]) != "+" {
           national_number = "+"+national_number
         }
 
